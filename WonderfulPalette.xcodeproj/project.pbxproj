@@ -13,6 +13,7 @@
 		ADC133F428E3D86300F979E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E228E3D86100F979E2 /* ContentView.swift */; };
 		ADC133F528E3D86300F979E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC133E328E3D86300F979E2 /* Assets.xcassets */; };
 		ADC133F628E3D86300F979E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC133E328E3D86300F979E2 /* Assets.xcassets */; };
+		ADC1340428E5231400F979E2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1340328E5231400F979E2 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		ADC133E828E3D86300F979E2 /* WonderfulPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderfulPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC133EE28E3D86300F979E2 /* WonderfulPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderfulPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC133F028E3D86300F979E2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		ADC1340328E5231400F979E2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,10 @@
 		ADC133E028E3D86100F979E2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				ADC1340228E5230000F979E2 /* Helper */,
+				ADC1340128E3D90000F979E2 /* ViewModel */,
+				ADC1340028E3D8FC00F979E2 /* View */,
+				ADC133FF28E3D8F300F979E2 /* Model */,
 				ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */,
 				ADC133E228E3D86100F979E2 /* ContentView.swift */,
 				ADC133E328E3D86300F979E2 /* Assets.xcassets */,
@@ -76,6 +82,35 @@
 				ADC133F028E3D86300F979E2 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		ADC133FF28E3D8F300F979E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADC1340028E3D8FC00F979E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADC1340128E3D90000F979E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADC1340228E5230000F979E2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1340328E5231400F979E2 /* Color+Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC133F328E3D86300F979E2 /* ContentView.swift in Sources */,
+				ADC1340428E5231400F979E2 /* Color+Extension.swift in Sources */,
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
