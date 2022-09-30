@@ -24,7 +24,7 @@ struct ContentView: View {
                         .frame(width: 45, height: 45)
                     Spacer()
                 }
-                
+
                 //Complement
                 VStack(alignment: .leading) {
                     HStack {

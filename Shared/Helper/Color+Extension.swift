@@ -10,27 +10,27 @@ import UIKit
 
 extension Color {
     var complement: Color {
-        return Color(self.withHueOffset(0.5))
+        return Color(self.hueOffsetDegree(0.5))
     }
 
     var splitComplement0: Color {
-        return Color(self.withHueOffset(150 / 360))
+        return Color(self.hueOffsetDegree(150 / 360))
     }
 
     var splitComplement1: Color {
-        return Color(self.withHueOffset(210 / 360))
+        return Color(self.hueOffsetDegree(210 / 360))
     }
 
     var triadic0: Color {
-        return Color(self.withHueOffset(120 / 360))
+        return Color(self.hueOffsetDegree(120 / 360))
     }
 
     var triadic1: Color {
-        return Color(self.withHueOffset(240 / 360))
+        return Color(self.hueOffsetDegree(240 / 360))
     }
 
     var tetradic0: Color {
-        return Color(self.withHueOffset(0.25))
+        return Color(self.hueOffsetDegree(0.25))
     }
 
     var tetradic1: Color {
@@ -38,18 +38,18 @@ extension Color {
     }
 
     var tetradic2: Color {
-        return Color(self.withHueOffset(0.75))
+        return Color(self.hueOffsetDegree(0.75))
     }
 
     var analagous0: Color {
-        return Color(self.withHueOffset(-1 / 12))
+        return Color(self.hueOffsetDegree(-1 / 12))
     }
 
     var analagous1: Color {
-        return Color(self.withHueOffset(1 / 12))
+        return Color(self.hueOffsetDegree(1 / 12))
     }
-    
-    private func withHueOffset(_ offset: CGFloat) -> UIColor {
+
+    private func hueOffsetDegree(_ offset: CGFloat) -> UIColor {
         var h: CGFloat = 0
         var s: CGFloat = 0
         var b: CGFloat = 0
@@ -60,4 +60,3 @@ extension Color {
         return UIColor(hue: fmod(h + offset, 1), saturation: s, brightness: b, alpha: a)
     }
 }
-

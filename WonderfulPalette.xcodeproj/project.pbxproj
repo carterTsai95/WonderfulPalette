@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */; };
-		ADC133F228E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */; };
 		ADC133F328E3D86300F979E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E228E3D86100F979E2 /* ContentView.swift */; };
-		ADC133F428E3D86300F979E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E228E3D86100F979E2 /* ContentView.swift */; };
 		ADC133F528E3D86300F979E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC133E328E3D86300F979E2 /* Assets.xcassets */; };
-		ADC133F628E3D86300F979E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC133E328E3D86300F979E2 /* Assets.xcassets */; };
 		ADC1340428E5231400F979E2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1340328E5231400F979E2 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,20 +18,12 @@
 		ADC133E228E3D86100F979E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADC133E328E3D86300F979E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADC133E828E3D86300F979E2 /* WonderfulPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderfulPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADC133EE28E3D86300F979E2 /* WonderfulPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderfulPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC133F028E3D86300F979E2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		ADC1340328E5231400F979E2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ADC133E528E3D86300F979E2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ADC133EB28E3D86300F979E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				ADC133E828E3D86300F979E2 /* WonderfulPalette.app */,
-				ADC133EE28E3D86300F979E2 /* WonderfulPalette.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +111,7 @@
 				ADC133E428E3D86300F979E2 /* Sources */,
 				ADC133E528E3D86300F979E2 /* Frameworks */,
 				ADC133E628E3D86300F979E2 /* Resources */,
+				ADC1340528E6841A00F979E2 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -131,23 +120,6 @@
 			name = "WonderfulPalette (iOS)";
 			productName = "WonderfulPalette (iOS)";
 			productReference = ADC133E828E3D86300F979E2 /* WonderfulPalette.app */;
-			productType = "com.apple.product-type.application";
-		};
-		ADC133ED28E3D86300F979E2 /* WonderfulPalette (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ADC133FC28E3D86300F979E2 /* Build configuration list for PBXNativeTarget "WonderfulPalette (macOS)" */;
-			buildPhases = (
-				ADC133EA28E3D86300F979E2 /* Sources */,
-				ADC133EB28E3D86300F979E2 /* Frameworks */,
-				ADC133EC28E3D86300F979E2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WonderfulPalette (macOS)";
-			productName = "WonderfulPalette (macOS)";
-			productReference = ADC133EE28E3D86300F979E2 /* WonderfulPalette.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,9 +133,6 @@
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					ADC133E728E3D86300F979E2 = {
-						CreatedOnToolsVersion = 13.4.1;
-					};
-					ADC133ED28E3D86300F979E2 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
@@ -182,7 +151,6 @@
 			projectRoot = "";
 			targets = (
 				ADC133E728E3D86300F979E2 /* WonderfulPalette (iOS) */,
-				ADC133ED28E3D86300F979E2 /* WonderfulPalette (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -196,15 +164,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADC133EC28E3D86300F979E2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ADC1340528E6841A00F979E2 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC133F628E3D86300F979E2 /* Assets.xcassets in Resources */,
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADC133E428E3D86300F979E2 /* Sources */ = {
@@ -214,15 +195,6 @@
 				ADC133F328E3D86300F979E2 /* ContentView.swift in Sources */,
 				ADC1340428E5231400F979E2 /* Color+Extension.swift in Sources */,
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ADC133EA28E3D86300F979E2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ADC133F428E3D86300F979E2 /* ContentView.swift in Sources */,
-				ADC133F228E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,62 +371,6 @@
 			};
 			name = Release;
 		};
-		ADC133FD28E3D86300F979E2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S84Q43P56;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "hung-chun.tsai.WonderfulPalette";
-				PRODUCT_NAME = WonderfulPalette;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		ADC133FE28E3D86300F979E2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S84Q43P56;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "hung-chun.tsai.WonderfulPalette";
-				PRODUCT_NAME = WonderfulPalette;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,15 +388,6 @@
 			buildConfigurations = (
 				ADC133FA28E3D86300F979E2 /* Debug */,
 				ADC133FB28E3D86300F979E2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ADC133FC28E3D86300F979E2 /* Build configuration list for PBXNativeTarget "WonderfulPalette (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ADC133FD28E3D86300F979E2 /* Debug */,
-				ADC133FE28E3D86300F979E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
