@@ -41,6 +41,7 @@ struct ContentView: View {
                             .foregroundColor(selectedColor.complement)
                             .frame(width: 50, height: 50)
                     }
+                    Text(selectedColor.complement.hexStringFromColor())
 
                 }.padding([.horizontal, .bottom], 10)
 
