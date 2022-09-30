@@ -50,13 +50,19 @@ extension Color {
     }
 
     private func hueOffsetDegree(_ offset: CGFloat) -> UIColor {
-        var h: CGFloat = 0
-        var s: CGFloat = 0
-        var b: CGFloat = 0
-        var a: CGFloat = 0
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
         let color = UIColor(self)
 
-        color.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
-        return UIColor(hue: fmod(h + offset, 1), saturation: s, brightness: b, alpha: a)
+        color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+        return UIColor(
+            hue: fmod(hue + offset, 1),
+            saturation: saturation,
+            brightness: brightness,
+            alpha: alpha
+        )
     }
 }

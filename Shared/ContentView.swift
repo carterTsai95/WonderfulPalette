@@ -25,7 +25,7 @@ struct ContentView: View {
                     Spacer()
                 }
 
-                //Complement
+                // Complement
                 VStack(alignment: .leading) {
                     HStack {
                         Text("1. Complement")
@@ -41,10 +41,10 @@ struct ContentView: View {
                             .foregroundColor(selectedColor.complement)
                             .frame(width: 50, height: 50)
                     }
-                    
+
                 }.padding([.horizontal, .bottom], 10)
-                
-                //Split Complement
+
+                // Split Complement
                 VStack(alignment: .leading) {
                     HStack {
                         Text("2. Split Complement")
@@ -65,7 +65,7 @@ struct ContentView: View {
                     }
                 }.padding([.horizontal, .bottom], 10)
 
-                //Triadic
+                // Triadic
                 VStack(alignment: .leading) {
                     HStack {
                         Text("3. Triadic")
@@ -86,7 +86,7 @@ struct ContentView: View {
                     }
                 }.padding([.horizontal, .bottom], 10)
 
-                //Tetradic
+                // Tetradic
                 VStack(alignment: .leading) {
                     HStack {
                         Text("4. Tetradic")
@@ -110,7 +110,7 @@ struct ContentView: View {
                     }
                 }.padding([.horizontal, .bottom], 10)
 
-                //Analagous
+                // Analagous
                 VStack(alignment: .leading) {
                     HStack {
                         Text("5. Tetradic")
