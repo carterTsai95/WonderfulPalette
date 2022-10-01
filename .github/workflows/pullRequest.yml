@@ -10,8 +10,9 @@ jobs:
   test:
     runs-on: macOS-latest
     steps:
+      - name: Checkout
       - uses: actions/checkout@v2
-      
+
       - name: List avialable Xcode versions
         run: ls /Applications | grep Xcode
 
@@ -41,6 +42,11 @@ jobs:
             Build/Build/Products
           key: ${{ runner.os }}-deps-v1-${{ hashFiles('BILDsolid.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
           restore-keys: ${{ runner.os }}-deps-v1-
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_$.app && /usr/bin/xcodebuild -version
+
+      - name: Run unit tests
+        run: xcodebuild test -scheme WonderfulPalette -project WonderfulPalette.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11,OS=$' | xcpretty && exit ${PIPESTATUS[0]}
 
       - name: Run Tests (No Cache)
         if: steps.setup.outputs.cache-hit != 'true'
