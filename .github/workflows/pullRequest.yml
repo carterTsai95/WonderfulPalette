@@ -8,9 +8,12 @@ on:
 
 jobs:
   test:
-    runs-on: macos-11
+    runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: List avialable Xcode versions
+        run: ls /Applications | grep Xcode
 
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1

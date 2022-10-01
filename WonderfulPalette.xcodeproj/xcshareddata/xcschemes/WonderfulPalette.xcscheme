@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ADC133E728E3D86300F979E2"
                BuildableName = "WonderfulPalette.app"
-               BlueprintName = "WonderfulPalette (iOS)"
+               BlueprintName = "WonderfulPalette"
                ReferencedContainer = "container:WonderfulPalette.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,7 +56,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADC133E728E3D86300F979E2"
             BuildableName = "WonderfulPalette.app"
-            BlueprintName = "WonderfulPalette (iOS)"
+            BlueprintName = "WonderfulPalette"
             ReferencedContainer = "container:WonderfulPalette.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -73,7 +73,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADC133E728E3D86300F979E2"
             BuildableName = "WonderfulPalette.app"
-            BlueprintName = "WonderfulPalette (iOS)"
+            BlueprintName = "WonderfulPalette"
             ReferencedContainer = "container:WonderfulPalette.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
