@@ -17,8 +17,9 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-      - name: Force Xcode 13.4
-        run: sudo xcode-select -switch /Applications/Xcode_13.4.app
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '13.4'
 
       - uses: ruby/setup-ruby@v1
 
