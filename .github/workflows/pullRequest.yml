@@ -42,8 +42,5 @@ jobs:
           key: ${{ runner.os }}-deps-v1-${{ hashFiles('BILDsolid.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
           restore-keys: ${{ runner.os }}-deps-v1-
 
-      - name: Select Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app && /usr/bin/xcodebuild -version
-
       - name: Run tests
-        run: xcodebuild clean test -project "WonderfulPalette.xcodeproj" -scheme "WonderfulPalette" -destination "platform=iOS Simulator,name=iPhone 11,OS=latest"
+        run: xcodebuild clean test -project "MyApp.xcodeproj" -scheme "MyApp" -destination "platform=iOS Simulator,name=iPhone 11,OS=15.2"
