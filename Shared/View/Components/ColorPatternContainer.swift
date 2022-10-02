@@ -7,14 +7,39 @@
 
 import SwiftUI
 
-struct ColorPatternContainer: View {
+struct ColorPatternContainer<Content: View>: View {
+    let headerTitle: String
+    @ViewBuilder var content: Content
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            HStack {
+                Text(headerTitle)
+                    .fontWeight(.medium)
+                Spacer()
+            }
+
+            Divider()
+
+            // TODO: Refactoring with HStack that include all the color at once
+            content
+        }.padding([.horizontal, .bottom], 10)
     }
 }
-
 struct ColorPatternContainer_Previews: PreviewProvider {
     static var previews: some View {
-        ColorPatternContainer()
+        UIElementPreview(
+            ColorPatternContainer(
+                headerTitle: "1. Color Pattern"
+            ) {
+                HStack {
+                    Rectangle()
+                        .foregroundColor(.indigo)
+                        .frame(width: 50, height: 50)
+                    Rectangle()
+                        .foregroundColor(.indigo.complement)
+                        .frame(width: 50, height: 50)
+                }
+            }
+        )
     }
 }
