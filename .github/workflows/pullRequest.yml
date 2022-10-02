@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Delete derived data
+        run: clear_derived_data
+
       - name: List avialable Xcode versions
         run: ls /Applications | grep Xcode
 
