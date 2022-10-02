@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AD84201928E74085009CCBF2 /* WonderfulPaletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84201828E74085009CCBF2 /* WonderfulPaletteTests.swift */; };
+		AD84202228E9E701009CCBF2 /* ColorPatternContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202128E9E701009CCBF2 /* ColorPatternContainer.swift */; };
+		AD84202528E9EAFB009CCBF2 /* UIElementPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */; };
 		ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */; };
-		ADC133F328E3D86300F979E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E228E3D86100F979E2 /* ContentView.swift */; };
+		ADC133F328E3D86300F979E2 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E228E3D86100F979E2 /* HomePageView.swift */; };
 		ADC133F528E3D86300F979E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC133E328E3D86300F979E2 /* Assets.xcassets */; };
 		ADC1340428E5231400F979E2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1340328E5231400F979E2 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -27,8 +29,10 @@
 /* Begin PBXFileReference section */
 		AD84201628E74085009CCBF2 /* WonderfulPaletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonderfulPaletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD84201828E74085009CCBF2 /* WonderfulPaletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderfulPaletteTests.swift; sourceTree = "<group>"; };
+		AD84202128E9E701009CCBF2 /* ColorPatternContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternContainer.swift; sourceTree = "<group>"; };
+		AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElementPreview.swift; sourceTree = "<group>"; };
 		ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderfulPaletteApp.swift; sourceTree = "<group>"; };
-		ADC133E228E3D86100F979E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADC133E228E3D86100F979E2 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		ADC133E328E3D86300F979E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADC133E828E3D86300F979E2 /* WonderfulPalette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderfulPalette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC1340328E5231400F979E2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -68,6 +72,22 @@
 			path = "Color+Extension";
 			sourceTree = "<group>";
 		};
+		AD84202028E9E6E7009CCBF2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AD84202128E9E701009CCBF2 /* ColorPatternContainer.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AD84202328E9EA49009CCBF2 /* View+Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */,
+			);
+			path = "View+Modifier";
+			sourceTree = "<group>";
+		};
 		ADC133DB28E3D86100F979E2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +105,7 @@
 				ADC1340028E3D8FC00F979E2 /* View */,
 				ADC133FF28E3D8F300F979E2 /* Model */,
 				ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */,
-				ADC133E228E3D86100F979E2 /* ContentView.swift */,
+				ADC133E228E3D86100F979E2 /* HomePageView.swift */,
 				ADC133E328E3D86300F979E2 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -110,6 +130,7 @@
 		ADC1340028E3D8FC00F979E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD84202028E9E6E7009CCBF2 /* Components */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +145,7 @@
 		ADC1340228E5230000F979E2 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				AD84202328E9EA49009CCBF2 /* View+Modifier */,
 				ADC1340328E5231400F979E2 /* Color+Extension.swift */,
 			);
 			path = Helper;
@@ -258,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC133F328E3D86300F979E2 /* ContentView.swift in Sources */,
+				ADC133F328E3D86300F979E2 /* HomePageView.swift in Sources */,
 				ADC1340428E5231400F979E2 /* Color+Extension.swift in Sources */,
+				AD84202528E9EAFB009CCBF2 /* UIElementPreview.swift in Sources */,
+				AD84202228E9E701009CCBF2 /* ColorPatternContainer.swift in Sources */,
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
