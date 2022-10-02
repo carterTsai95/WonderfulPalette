@@ -45,9 +45,5 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app && /usr/bin/xcodebuild -version
 
-      - name: Build
-        run: |
-          xcodebuild clean build analyze -scheme WonderfulPalette -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11'
-
       - name: Run tests
         run: xcodebuild clean test -project "WonderfulPalette.xcodeproj" -scheme "WonderfulPalette" -destination "platform=iOS Simulator,name=iPhone 11,OS=latest"

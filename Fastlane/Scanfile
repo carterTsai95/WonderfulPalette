@@ -4,7 +4,7 @@
 workspace "WonderfulPalette.xcodeproj/project.xcworkspace"
 scheme "WonderfulPalette"
 sdk "iphonesimulator"
-device "iPhone 11"
+device "iPhone 11 (13.2)"
 code_coverage true
 xcargs '-parallelizeTargets'
 prelaunch_simulator true
