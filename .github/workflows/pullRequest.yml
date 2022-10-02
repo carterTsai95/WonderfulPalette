@@ -12,9 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Delete derived data
-        run: clear_derived_data
-
       - name: List avialable Xcode versions
         run: ls /Applications | grep Xcode
 
@@ -45,5 +42,10 @@ jobs:
           key: ${{ runner.os }}-deps-v1-${{ hashFiles('BILDsolid.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
           restore-keys: ${{ runner.os }}-deps-v1-
 
-      - name: Run tests
-        run: xcodebuild clean test -project "WonderfulPalette.xcodeproj" -scheme "WonderfulPalette" -destination "platform=iOS Simulator,name=iPhone 11,OS=15.2"
+      - name: Run Tests (No Cache)
+        if: steps.setup.outputs.cache-hit != 'true'
+        run: bundle exec fastlane unit_test
+      
+      - name: Run Tests (Cache)
+        if: steps.setup.outputs.cache-hit == 'true'
+        run: bundle exec fastlane unit_test skip_package_dependencies_resolution:true
