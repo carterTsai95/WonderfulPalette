@@ -1,7 +1,7 @@
 # For more information about this configuration visit
 # https://github.com/fastlane/scan#scanfile
 
-workspace "WonderfulPalette.xcodeproj"
+workspace "WonderfulPalette.xcodeproj/project.xcworkspace"
 scheme "WonderfulPalette"
 sdk "iphonesimulator"
 device "iPhone 11"
