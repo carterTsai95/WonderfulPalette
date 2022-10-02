@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomePageView.swift
 //  Shared
 //
 //  Created by Hung-Chun Tsai on 2022-09-27.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomePageView: View {
     @State private var selectedColor: Color = .red
     var body: some View {
         VStack {
@@ -26,13 +26,9 @@ struct ContentView: View {
                 }
 
                 // Complement
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("1. Complement")
-                            .fontWeight(.medium)
-                        Spacer()
-                    }
-                    Divider()
+                ColorPatternContainer(
+                    headerTitle: "1. Complement"
+                ) {
                     HStack {
                         Rectangle()
                             .foregroundColor(selectedColor)
@@ -41,18 +37,12 @@ struct ContentView: View {
                             .foregroundColor(selectedColor.complement)
                             .frame(width: 50, height: 50)
                     }
-                    Text(selectedColor.complement.hexStringFromColor())
-
-                }.padding([.horizontal, .bottom], 10)
+                }
 
                 // Split Complement
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("2. Split Complement")
-                            .fontWeight(.medium)
-                        Spacer()
-                    }
-                    Divider()
+                ColorPatternContainer(
+                    headerTitle: "2. Split Complement"
+                ) {
                     HStack {
                         Rectangle()
                             .foregroundColor(selectedColor)
@@ -64,16 +54,12 @@ struct ContentView: View {
                             .foregroundColor(selectedColor.splitComplement1)
                             .frame(width: 50, height: 50)
                     }
-                }.padding([.horizontal, .bottom], 10)
+                }
 
                 // Triadic
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("3. Triadic")
-                            .fontWeight(.medium)
-                        Spacer()
-                    }
-                    Divider()
+                ColorPatternContainer(
+                    headerTitle: "3. Triadic"
+                ) {
                     HStack {
                         Rectangle()
                             .foregroundColor(selectedColor)
@@ -85,16 +71,12 @@ struct ContentView: View {
                             .foregroundColor(selectedColor.triadic1)
                             .frame(width: 50, height: 50)
                     }
-                }.padding([.horizontal, .bottom], 10)
+                }
 
                 // Tetradic
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("4. Tetradic")
-                            .fontWeight(.medium)
-                        Spacer()
-                    }
-                    Divider()
+                ColorPatternContainer(
+                    headerTitle: "4. Tetradic"
+                ) {
                     HStack {
                         Rectangle()
                             .foregroundColor(selectedColor)
@@ -109,16 +91,12 @@ struct ContentView: View {
                             .foregroundColor(selectedColor.tetradic2)
                             .frame(width: 50, height: 50)
                     }
-                }.padding([.horizontal, .bottom], 10)
+                }
 
                 // Analagous
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("5. Tetradic")
-                            .fontWeight(.medium)
-                        Spacer()
-                    }
-                    Divider()
+                ColorPatternContainer(
+                    headerTitle: "5. Analagous"
+                ) {
                     HStack {
                         Rectangle()
                             .foregroundColor(selectedColor)
@@ -130,7 +108,7 @@ struct ContentView: View {
                             .foregroundColor(selectedColor.analagous1)
                             .frame(width: 50, height: 50)
                     }
-                }.padding([.horizontal, .bottom], 10)
+                }
             }
             Spacer()
         }
@@ -139,6 +117,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomePageView()
     }
 }
