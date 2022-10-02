@@ -43,4 +43,4 @@ jobs:
           restore-keys: ${{ runner.os }}-deps-v1-
 
       - name: Run tests
-        run: xcodebuild clean test -project "MyApp.xcodeproj" -scheme "MyApp" -destination "platform=iOS Simulator,name=iPhone 11,OS=15.2"
+        run: xcodebuild clean test -project "WonderfulPalette.xcodeproj" -scheme "WonderfulPalette" -destination "platform=iOS Simulator,name=iPhone 11,OS=15.2"
