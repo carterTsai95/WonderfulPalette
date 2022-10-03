@@ -42,7 +42,7 @@ extension Color {
     }
 
     var analagous0: Color {
-        return Color(self.hueOffsetDegree(-1 / 12))
+        return Color(self.hueOffsetDegree(11 / 12))
     }
 
     var analagous1: Color {
