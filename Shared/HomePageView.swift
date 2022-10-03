@@ -30,9 +30,14 @@ struct HomePageView: View {
                     headerTitle: "1. Complement"
                 ) {
                     HStack {
-                        Rectangle()
-                            .foregroundColor(selectedColor)
-                            .frame(width: 50, height: 50)
+                        VStack(alignment: .center, spacing: 2) {
+                            Rectangle()
+                                .foregroundColor(selectedColor)
+                                .frame(width: 50, height: 50)
+                            Text(selectedColor.hexStringFromColor())
+                                .font(.caption2)
+                                .foregroundColor(.gray)
+                        }
                         Rectangle()
                             .foregroundColor(selectedColor.complement)
                             .frame(width: 50, height: 50)
