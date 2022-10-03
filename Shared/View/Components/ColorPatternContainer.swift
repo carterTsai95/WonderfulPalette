@@ -12,7 +12,7 @@ struct ColorPatternContainer<Content: View>: View {
     @ViewBuilder var content: Content
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            HStack(spacing: 0) {
                 Text(headerTitle)
                     .fontWeight(.medium)
                 Spacer()
@@ -21,10 +21,12 @@ struct ColorPatternContainer<Content: View>: View {
             Divider()
 
             // TODO: Refactoring with HStack that include all the color at once
+
             content
         }.padding([.horizontal, .bottom], 10)
     }
 }
+
 struct ColorPatternContainer_Previews: PreviewProvider {
     static var previews: some View {
         UIElementPreview(

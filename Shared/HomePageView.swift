@@ -29,13 +29,9 @@ struct HomePageView: View {
                 ColorPatternContainer(
                     headerTitle: "1. Complement"
                 ) {
-                    HStack {
-                        Rectangle()
-                            .foregroundColor(selectedColor)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.complement)
-                            .frame(width: 50, height: 50)
+                    HStack(spacing: 1.5) {
+                        ColorCellView(color: selectedColor)
+                        ColorCellView(color: selectedColor.complement)
                     }
                 }
 
@@ -43,16 +39,10 @@ struct HomePageView: View {
                 ColorPatternContainer(
                     headerTitle: "2. Split Complement"
                 ) {
-                    HStack {
-                        Rectangle()
-                            .foregroundColor(selectedColor)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.splitComplement0)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.splitComplement1)
-                            .frame(width: 50, height: 50)
+                    HStack(spacing: 1.5) {
+                        ColorCellView(color: selectedColor)
+                        ColorCellView(color: selectedColor.splitComplement0)
+                        ColorCellView(color: selectedColor.splitComplement1)
                     }
                 }
 
@@ -60,16 +50,10 @@ struct HomePageView: View {
                 ColorPatternContainer(
                     headerTitle: "3. Triadic"
                 ) {
-                    HStack {
-                        Rectangle()
-                            .foregroundColor(selectedColor)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.triadic0)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.triadic1)
-                            .frame(width: 50, height: 50)
+                    HStack(spacing: 1.5) {
+                        ColorCellView(color: selectedColor)
+                        ColorCellView(color: selectedColor.triadic0)
+                        ColorCellView(color: selectedColor.triadic1)
                     }
                 }
 
@@ -77,19 +61,11 @@ struct HomePageView: View {
                 ColorPatternContainer(
                     headerTitle: "4. Tetradic"
                 ) {
-                    HStack {
-                        Rectangle()
-                            .foregroundColor(selectedColor)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.tetradic0)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.tetradic1)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.tetradic2)
-                            .frame(width: 50, height: 50)
+                    HStack(spacing: 1.5) {
+                        ColorCellView(color: selectedColor)
+                        ColorCellView(color: selectedColor.tetradic0)
+                        ColorCellView(color: selectedColor.tetradic1)
+                        ColorCellView(color: selectedColor.tetradic2)
                     }
                 }
 
@@ -97,16 +73,10 @@ struct HomePageView: View {
                 ColorPatternContainer(
                     headerTitle: "5. Analagous"
                 ) {
-                    HStack {
-                        Rectangle()
-                            .foregroundColor(selectedColor)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.analagous0)
-                            .frame(width: 50, height: 50)
-                        Rectangle()
-                            .foregroundColor(selectedColor.analagous1)
-                            .frame(width: 50, height: 50)
+                    HStack(spacing: 1.5) {
+                        ColorCellView(color: selectedColor)
+                        ColorCellView(color: selectedColor.analagous0)
+                        ColorCellView(color: selectedColor.analagous1)
                     }
                 }
             }
