@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomePageView: View {
     @State private var selectedColor: Color = .red
+
     var body: some View {
         VStack {
             ColorPicker(selection: $selectedColor) {
