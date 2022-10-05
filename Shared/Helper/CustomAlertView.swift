@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CustomAlertView: View {
-    var placeHolder: String
-    @Binding var show: Bool
+    @EnvironmentObject var alertService: AlertsServiceBackend
+    var alertModel: AlertModel
 
     var body: some View {
         VStack(spacing: 20) {
             Image(systemName: "checkmark")
                 .font(.title)
-            Text(placeHolder)
+            Text(alertModel.title)
                 .fontWeight(.medium)
         }
         .padding(.vertical, 25)
@@ -24,18 +24,6 @@ struct CustomAlertView: View {
             .ultraThinMaterial
         )
         .cornerRadius(15)
-        .onTapGesture {
-            withAnimation {
-                show.toggle()
-            }
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                withAnimation {
-                    show.toggle()
-                }
-            }
-        }
     }
 }
 
@@ -43,8 +31,7 @@ struct CustomAlertView_Previews: PreviewProvider {
     static var previews: some View {
         UIElementPreview(
             CustomAlertView(
-                placeHolder: "Test",
-                show: .constant(true)
+                alertModel: .init(title: "Test Model")
             )
         )
     }

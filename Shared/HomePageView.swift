@@ -83,11 +83,13 @@ struct HomePageView: View {
             }
             Spacer()
         }
+        .alertsPresentation()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()
+            .environmentObject(AlertsServiceBackend())
     }
 }
