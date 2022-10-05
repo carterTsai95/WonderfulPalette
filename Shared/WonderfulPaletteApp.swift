@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Combine
 
 @main
 struct WonderfulPaletteApp: App {
     var body: some Scene {
         WindowGroup {
             HomePageView()
+                .environmentObject(AlertsServiceBackend())
         }
     }
 }
