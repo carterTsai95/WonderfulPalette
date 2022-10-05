@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ColorCellView: View {
+    @EnvironmentObject var alertService: AlertsServiceBackend
     @ScaledMetric var cellSize: CGFloat = 55
     @State var showAlert = false
 
@@ -22,23 +23,20 @@ struct ColorCellView: View {
     }
 
     var body: some View {
-        Button {
-            viewModel.copyToClipboard()
-            showAlert.toggle()
-        } label: {
-            VStack(alignment: .center, spacing: 2) {
-                Rectangle()
-                    .foregroundColor(color)
-                    .frame(width: cellSize, height: cellSize)
-                Text(color.hexStringFromColor())
-                    .font(.caption2)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .foregroundColor(.gray)
+            Button {
+                viewModel.copyToClipboard()
+                alertService.presentAlert(title: color.hexStringFromColor())
+            } label: {
+                VStack(alignment: .center, spacing: 2) {
+                    Rectangle()
+                        .foregroundColor(color)
+                        .frame(width: cellSize, height: cellSize)
+                    Text(color.hexStringFromColor())
+                        .font(.caption2)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .foregroundColor(.gray)
+                }
             }
-            if showAlert {
-                CustomAlertView(placeHolder: "Test", show: $showAlert)
-            }
-        }
     }
 }
 
