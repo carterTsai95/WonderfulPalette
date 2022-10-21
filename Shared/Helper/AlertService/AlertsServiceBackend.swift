@@ -31,6 +31,7 @@ class AlertsServiceBackend: AlertsService, ObservableObject {
             self.alertsQueueSignal.send(
                 AlertModel(title: title)
             )
+            UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
         }
     }
 
