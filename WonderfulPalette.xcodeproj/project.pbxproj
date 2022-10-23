@@ -10,6 +10,7 @@
 		AD6F0232290232C1004715AC /* ShowSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F0231290232C1004715AC /* ShowSettingView.swift */; };
 		AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F02352902334B004715AC /* FormRowLinkView.swift */; };
 		AD6F0238290234BE004715AC /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F0237290234BE004715AC /* FormRowStaticView.swift */; };
+		AD6F023B2904C834004715AC /* ShowColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F023A2904C834004715AC /* ShowColorPaletteView.swift */; };
 		AD84201928E74085009CCBF2 /* WonderfulPaletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84201828E74085009CCBF2 /* WonderfulPaletteTests.swift */; };
 		AD84202228E9E701009CCBF2 /* ColorPatternContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202128E9E701009CCBF2 /* ColorPatternContainer.swift */; };
 		AD84202528E9EAFB009CCBF2 /* UIElementPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */; };
@@ -40,6 +41,7 @@
 		AD6F0231290232C1004715AC /* ShowSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSettingView.swift; sourceTree = "<group>"; };
 		AD6F02352902334B004715AC /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
 		AD6F0237290234BE004715AC /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
+		AD6F023A2904C834004715AC /* ShowColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowColorPaletteView.swift; sourceTree = "<group>"; };
 		AD84201628E74085009CCBF2 /* WonderfulPaletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonderfulPaletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD84201828E74085009CCBF2 /* WonderfulPaletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderfulPaletteTests.swift; sourceTree = "<group>"; };
 		AD84202128E9E701009CCBF2 /* ColorPatternContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternContainer.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 				AD6F0237290234BE004715AC /* FormRowStaticView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		AD6F02392904C81F004715AC /* ShowColorPaletteView */ = {
+			isa = PBXGroup;
+			children = (
+				AD6F023A2904C834004715AC /* ShowColorPaletteView.swift */,
+			);
+			path = ShowColorPaletteView;
 			sourceTree = "<group>";
 		};
 		AD84201728E74085009CCBF2 /* WonderfulPaletteTests */ = {
@@ -189,6 +199,7 @@
 		ADC1340028E3D8FC00F979E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD6F02392904C81F004715AC /* ShowColorPaletteView */,
 				AD6F023329023318004715AC /* ShowSettingView */,
 				AD84202028E9E6E7009CCBF2 /* Components */,
 			);
@@ -357,6 +368,7 @@
 				AD84205928EDFD72009CCBF2 /* AlertService.swift in Sources */,
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
 				AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */,
+				AD6F023B2904C834004715AC /* ShowColorPaletteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
