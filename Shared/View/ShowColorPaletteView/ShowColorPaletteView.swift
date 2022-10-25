@@ -83,11 +83,14 @@ struct ShowColorPaletteView: View {
             }
             Spacer()
         }
+        .background(Color("ColorBase"))
     }
 }
 
 struct ShowColorPaletteView_Previews: PreviewProvider {
     static var previews: some View {
+        UIElementPreview(
         ShowColorPaletteView()
+        )
     }
 }
