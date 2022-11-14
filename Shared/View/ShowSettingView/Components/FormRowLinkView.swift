@@ -13,7 +13,7 @@ struct FormRowLinkView: View {
     var color: Color
     var text: String
     var link: String
-    
+
     // MARK: - BODY
     var body: some View {
         HStack {
