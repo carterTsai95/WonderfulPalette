@@ -45,6 +45,7 @@
 		AD6F0237290234BE004715AC /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
 		AD6F023A2904C834004715AC /* ShowColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowColorPaletteView.swift; sourceTree = "<group>"; };
 		AD7360932922ABC1000DD6C2 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		AD79EE232908071D00EFC7F5 /* EmptyLandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLandingPageView.swift; sourceTree = "<group>"; };
 		AD84201628E74085009CCBF2 /* WonderfulPaletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonderfulPaletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD84201828E74085009CCBF2 /* WonderfulPaletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderfulPaletteTests.swift; sourceTree = "<group>"; };
 		AD84202128E9E701009CCBF2 /* ColorPatternContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPatternContainer.swift; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 		ADC1340028E3D8FC00F979E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD79EE222908070200EFC7F5 /* ShowLandingPageView */,
 				AD6F02392904C81F004715AC /* ShowColorPaletteView */,
 				AD6F023329023318004715AC /* ShowSettingView */,
 				AD84202028E9E6E7009CCBF2 /* Components */,
@@ -380,6 +382,7 @@
 				AD84205728EDFD4E009CCBF2 /* AlertModel.swift in Sources */,
 				AD84205928EDFD72009CCBF2 /* AlertService.swift in Sources */,
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
+				AD79EE242908071D00EFC7F5 /* EmptyLandingPageView.swift in Sources */,
 				AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */,
 				AD6F023B2904C834004715AC /* ShowColorPaletteView.swift in Sources */,
 			);
