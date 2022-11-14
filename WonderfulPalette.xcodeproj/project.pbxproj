@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD693EDC2922AFB9009C3E84 /* EmptyLandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD693EDB2922AFB9009C3E84 /* EmptyLandingPageView.swift */; };
 		AD6F0232290232C1004715AC /* ShowSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F0231290232C1004715AC /* ShowSettingView.swift */; };
 		AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F02352902334B004715AC /* FormRowLinkView.swift */; };
 		AD6F0238290234BE004715AC /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F0237290234BE004715AC /* FormRowStaticView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD693EDB2922AFB9009C3E84 /* EmptyLandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyLandingPageView.swift; sourceTree = "<group>"; };
 		AD6F0231290232C1004715AC /* ShowSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSettingView.swift; sourceTree = "<group>"; };
 		AD6F02352902334B004715AC /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
 		AD6F0237290234BE004715AC /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD693ED92922AF4E009C3E84 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AD79EE232908071D00EFC7F5 /* EmptyLandingPageView.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		AD693EDA2922AFB9009C3E84 /* ShowLandingPageView */ = {
+			isa = PBXGroup;
+			children = (
+				AD693EDB2922AFB9009C3E84 /* EmptyLandingPageView.swift */,
+			);
+			path = ShowLandingPageView;
+			sourceTree = "<group>";
+		};
 		AD6F023329023318004715AC /* ShowSettingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +193,7 @@
 				ADC133E028E3D86100F979E2 /* Shared */,
 				AD84201728E74085009CCBF2 /* WonderfulPaletteTests */,
 				ADC133E928E3D86300F979E2 /* Products */,
+				AD693ED92922AF4E009C3E84 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,7 +230,7 @@
 		ADC1340028E3D8FC00F979E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AD79EE222908070200EFC7F5 /* ShowLandingPageView */,
+				AD693EDA2922AFB9009C3E84 /* ShowLandingPageView */,
 				AD6F02392904C81F004715AC /* ShowColorPaletteView */,
 				AD6F023329023318004715AC /* ShowSettingView */,
 				AD84202028E9E6E7009CCBF2 /* Components */,
@@ -384,6 +403,7 @@
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
 				AD79EE242908071D00EFC7F5 /* EmptyLandingPageView.swift in Sources */,
 				AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */,
+				AD693EDC2922AFB9009C3E84 /* EmptyLandingPageView.swift in Sources */,
 				AD6F023B2904C834004715AC /* ShowColorPaletteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
