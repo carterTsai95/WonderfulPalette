@@ -13,7 +13,6 @@
 		AD6F0238290234BE004715AC /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F0237290234BE004715AC /* FormRowStaticView.swift */; };
 		AD6F023B2904C834004715AC /* ShowColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F023A2904C834004715AC /* ShowColorPaletteView.swift */; };
 		AD7360942922ABC1000DD6C2 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7360932922ABC1000DD6C2 /* APIService.swift */; };
-		AD79EE242908071D00EFC7F5 /* EmptyLandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD79EE232908071D00EFC7F5 /* EmptyLandingPageView.swift */; };
 		AD84201928E74085009CCBF2 /* WonderfulPaletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84201828E74085009CCBF2 /* WonderfulPaletteTests.swift */; };
 		AD84202228E9E701009CCBF2 /* ColorPatternContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202128E9E701009CCBF2 /* ColorPatternContainer.swift */; };
 		AD84202528E9EAFB009CCBF2 /* UIElementPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */; };
@@ -401,7 +400,6 @@
 				AD84205728EDFD4E009CCBF2 /* AlertModel.swift in Sources */,
 				AD84205928EDFD72009CCBF2 /* AlertService.swift in Sources */,
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
-				AD79EE242908071D00EFC7F5 /* EmptyLandingPageView.swift in Sources */,
 				AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */,
 				AD693EDC2922AFB9009C3E84 /* EmptyLandingPageView.swift in Sources */,
 				AD6F023B2904C834004715AC /* ShowColorPaletteView.swift in Sources */,

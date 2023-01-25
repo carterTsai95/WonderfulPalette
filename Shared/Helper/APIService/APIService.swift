@@ -14,7 +14,7 @@ public class APIServiceCombine {
     public enum APIError: Error {
         case error(_ errorString: String)
     }
-    
+
     public func getJSON<T: Decodable>(urlString: String,
                                       dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
                                       keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys,
@@ -38,7 +38,6 @@ public class APIServiceCombine {
                 case .failure(let decodingError):
                     completion(.failure(APIError.error("Error: \(decodingError.localizedDescription)")))
                 }
-                
             } receiveValue: { (decodedData) in
                 completion(.success(decodedData))
             }

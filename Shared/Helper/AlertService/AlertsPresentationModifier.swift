@@ -15,9 +15,6 @@ struct AlertsPresentationModifier: ViewModifier {
     func body(content: Content) -> some View {
         ZStack {
             content
-                .onReceive(alertService.alertsQueueSignal.receive(on: DispatchQueue.main)) { alert in
-                    presentedAlert = alert
-                }
             alertView
         }
     }
@@ -25,12 +22,25 @@ struct AlertsPresentationModifier: ViewModifier {
     @ViewBuilder
     var alertView: some View {
         ZStack {
-            if let presentedAlert = alertService.currentAlert {
-                CustomAlertView(alertModel: presentedAlert)
-                    .transition(alertService.transition)
+            ForEach(alertService.currentAlerts, id: \.id) { alert in
+                CustomAlertView(alertModel: alert)
+                    .transition(alert.alertTransition.value)
+                    .onTapGesture {
+                        if alert.isTapToDismiss {
+                            alertService.removeAlert(alert)
+                        }
+                    }
             }
         }
-        .animation(alertService.animation, value: presentedAlert)
+    }
+}
+
+extension AnyTransition {
+    static var moveAndFade: AnyTransition {
+        .asymmetric(
+            insertion: .move(edge: .trailing).combined(with: .opacity),
+            removal: .scale.combined(with: .opacity)
+        )
     }
 }
 
@@ -39,5 +49,16 @@ extension View {
         modifier(
             AlertsPresentationModifier()
         )
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func applyIf<T: View>(_ condition: Bool, apply: (Self) -> T) -> some View {
+        if condition {
+            apply(self)
+        } else {
+            self
+        }
     }
 }

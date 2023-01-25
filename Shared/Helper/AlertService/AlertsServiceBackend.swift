@@ -10,7 +10,7 @@ import Combine
 
 class AlertsServiceBackend: AlertsService, ObservableObject {
     var alertsQueueSignal: PassthroughSubject<AlertModel, Never> = .init()
-    @Published var currentAlert: AlertModel?
+    @Published var currentAlerts: [AlertModel] = []
     private var alertTimer: Timer?
     private var cancellables: Set<AnyCancellable> = []
     let animation = Animation.easeInOut(duration: 0.1)
@@ -20,8 +20,9 @@ class AlertsServiceBackend: AlertsService, ObservableObject {
         alertsQueueSignal
             .receive(on: RunLoop.main)
             .sink { alertResult in
-                self.currentAlert = alertResult
-                self.alertCountdown()
+                withAnimation(.spring()) {
+                    self.registeredAlert(alertResult)
+                }
             }
             .store(in: &cancellables)
     }
@@ -35,14 +36,34 @@ class AlertsServiceBackend: AlertsService, ObservableObject {
         }
     }
 
-    func alertCountdown() {
-        self.alertTimer?.invalidate()
-        alertTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            withAnimation(self.animation) {
-                self.currentAlert = nil
-            }
-            self.alertTimer?.invalidate()
-            self.alertTimer = nil
+    private func registeredAlert(_ alert: AlertModel) {
+        self.currentAlerts.append(alert)
+        if alert.autoDismiss {
+            alertCountdown(alert)
+        }
+    }
+
+    func alertCountdown(_ alert: AlertModel) {
+        guard let index = currentAlerts.firstIndex(of: alert) else {
+            return
+        }
+
+        currentAlerts[index].timer = Timer()
+        currentAlerts[index].timer?.invalidate()
+        currentAlerts[index].timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            self.removeAlert(alert)
+        }
+    }
+
+    public func removeAlert(_ alert: AlertModel) {
+        guard let index = currentAlerts.firstIndex(where: { $0.id == alert.id }) else {
+            return
+        }
+        withAnimation(self.currentAlerts[index].alertAnimation.value) {
+            currentAlerts[index].timer?.invalidate()
+            currentAlerts[index].timer = nil
+            print("Remove Alert: \(currentAlerts[index].title)")
+            currentAlerts.remove(at: index)
         }
     }
 }
