@@ -17,7 +17,7 @@ public struct AlertModel: Equatable {
     let type: AlertType = .modal
     let title: String
     let autoDismiss: Bool = false
-    let isTapToDismiss: Bool = false
+    let isTapToDismiss: Bool = true
     let isDragToDismiss: Bool = true
     let countDownTimer: Int = 2
     let alertAnimationDuration: Double = 3
@@ -54,7 +54,7 @@ public extension AlertModel {
             case .toast:
                 return AnyTransition.asymmetric(
                     insertion: .move(edge: .top),
-                    removal: .move(edge: .bottom)
+                    removal: .move(edge: .top)
                 ).combined(with: .opacity)
             }
         }

@@ -33,23 +33,42 @@ struct CustomAlertView: View {
             }
         }
     }
+
     @GestureState private var dragState = DragState.inactive
     @State private var lastDragPosition: CGFloat = 0
+
     func dragOffset() -> CGFloat {
         if (dragState.translation.height < 0) {
             return dragState.translation.height
         }
-        return lastDragPosition
+
+        return withAnimation {
+            lastDragPosition
+        }
+    }
+
+    func shouldUpdateLastDragPosition(dragOffset: CGFloat) -> Bool {
+        switch alertModel.type {
+        case .modal:
+            return dragOffset < 0
+        case .fullpage:
+            return dragOffset < 0
+        case .toast:
+            return dragOffset > 0
+        }
     }
 
     private func onDragEnded(drag: DragGesture.Value) {
-        let reference = 100.0
-        if (drag.translation.height < reference) {
+        let reference = 150.0
+        if shouldUpdateLastDragPosition(dragOffset: drag.translation.height) {
             lastDragPosition = drag.translation.height
-            withAnimation {
-                lastDragPosition = 0
-            }
+        }
+        if (abs(drag.translation.height) > reference) {
             alertService.removeAlert(alertModel)
+        }
+
+        withAnimation(.spring()) {
+            lastDragPosition = 0
         }
     }
 
@@ -58,18 +77,22 @@ struct CustomAlertView: View {
     }
 
     func alertView() -> some View {
-        let view = VStack(spacing: 20) {
-            Image(systemName: "checkmark")
-                .font(.title)
-            Text(alertModel.title)
-                .fontWeight(.medium)
+        let view =
+        VStack {
+            VStack(spacing: 20) {
+                Image(systemName: "checkmark")
+                    .font(.title)
+                Text(alertModel.title)
+                    .fontWeight(.medium)
+            }
+            .padding(.vertical, 25)
+            .padding(.horizontal, 35)
+            .background(
+                .ultraThinMaterial
+            )
+            .cornerRadius(15)
+            Spacer()
         }
-        .padding(.vertical, 25)
-        .padding(.horizontal, 35)
-        .background(
-            .ultraThinMaterial
-        )
-        .cornerRadius(15)
         let drag = DragGesture()
             .updating($dragState) { drag, state, _ in
                 state = .dragging(translation: drag.translation)
@@ -77,7 +100,8 @@ struct CustomAlertView: View {
             .onEnded(onDragEnded)
         return view
             .applyIf(alertModel.isDragToDismiss) {
-                $0.offset(y: dragOffset())
+                $0
+                    .offset(y: dragOffset())
                     .simultaneousGesture(drag)
             }
     }
