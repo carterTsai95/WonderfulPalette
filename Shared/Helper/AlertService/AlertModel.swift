@@ -14,7 +14,7 @@ public struct AlertModel: Equatable {
     }
 
     let id: UUID = UUID()
-    let type: AlertType = .modal
+    let type: AlertType = .toast
     let title: String
     let autoDismiss: Bool = false
     let isTapToDismiss: Bool = true
@@ -43,8 +43,8 @@ public extension AlertModel {
             switch self {
             case .modal:
                 return AnyTransition.asymmetric(
-                    insertion: .scale,
-                    removal: .opacity
+                    insertion: .move(edge: .top),
+                    removal: .move(edge: .top)
                 ).combined(with: .opacity)
             case .fullpage:
                 return AnyTransition.asymmetric(
@@ -53,8 +53,8 @@ public extension AlertModel {
                 ).combined(with: .opacity)
             case .toast:
                 return AnyTransition.asymmetric(
-                    insertion: .move(edge: .top),
-                    removal: .move(edge: .top)
+                    insertion: .move(edge: .bottom),
+                    removal: .move(edge: .bottom)
                 ).combined(with: .opacity)
             }
         }

@@ -76,29 +76,72 @@ struct CustomAlertView: View {
         alertView()
     }
 
-    func alertView() -> some View {
-        let view =
-        VStack {
-            VStack(spacing: 20) {
-                Image(systemName: "checkmark")
-                    .font(.title)
-                Text(alertModel.title)
-                    .fontWeight(.medium)
+    func alertBuilder() -> some View {
+        Group {
+            switch alertModel.type {
+            case .modal:
+                VStack {
+                    VStack(spacing: 20) {
+                        Image(systemName: "checkmark")
+                            .font(.title)
+                        Text(alertModel.title)
+                            .fontWeight(.medium)
+                        Text("Modal")
+                    }
+                    .padding(.vertical, 25)
+                    .padding(.horizontal, 35)
+                    .background(
+                        .ultraThinMaterial
+                    )
+                    .cornerRadius(15)
+                    Spacer()
+                }
+            case .fullpage:
+                VStack {
+                    Spacer()
+                    VStack(spacing: 20) {
+                        Image(systemName: "checkmark")
+                            .font(.title)
+                        Text(alertModel.title)
+                            .fontWeight(.medium)
+                    }
+                    .padding(.vertical, 25)
+                    .padding(.horizontal, 35)
+                    .background(
+                        .ultraThinMaterial
+                    )
+                    .cornerRadius(15)
+                    Spacer()
+                }
+            case .toast:
+                VStack {
+                    Spacer()
+                    VStack(spacing: 20) {
+                        Image(systemName: "checkmark")
+                            .font(.title)
+                        Text(alertModel.title)
+                            .fontWeight(.medium)
+                        Text("Toast")
+                            .fontWeight(.medium)
+                    }
+                    .padding(.vertical, 25)
+                    .padding(.horizontal, 35)
+                    .background(
+                        .ultraThinMaterial
+                    )
+                    .cornerRadius(15)
+                }
             }
-            .padding(.vertical, 25)
-            .padding(.horizontal, 35)
-            .background(
-                .ultraThinMaterial
-            )
-            .cornerRadius(15)
-            Spacer()
         }
+    }
+
+    func alertView() -> some View {
         let drag = DragGesture()
             .updating($dragState) { drag, state, _ in
                 state = .dragging(translation: drag.translation)
             }
             .onEnded(onDragEnded)
-        return view
+        return alertBuilder()
             .applyIf(alertModel.isDragToDismiss) {
                 $0
                     .offset(y: dragOffset())
