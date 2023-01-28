@@ -14,44 +14,44 @@ public struct AlertModel: Equatable {
     }
 
     let id: UUID = UUID()
-    let type: AlertType = .toast
+    let type: AlertType = .bottom
     let title: String
     let autoDismiss: Bool = false
-    let isTapToDismiss: Bool = true
+    let isTapToDismiss: Bool = false
     let isDragToDismiss: Bool = true
     let countDownTimer: Int = 2
     let alertAnimationDuration: Double = 3
     var timer: Timer?
     var description: String?
-    var alertAnimation: AlertAnimation = .fullpage(duration: 1)
-    var alertTransition: AlertTransition = .toast
+    var alertAnimation: AlertAnimation = .center(duration: 1)
+    var alertTransition: AlertTransition = .bottom
 }
 
 public extension AlertModel {
     enum AlertType {
-        case modal
-        case fullpage
-        case toast
+        case top
+        case center
+        case bottom
     }
     // Animation and Transition
     enum AlertTransition {
-        case modal
-        case fullpage
-        case toast
+        case top
+        case center
+        case bottom
 
         public var value: AnyTransition {
             switch self {
-            case .modal:
+            case .top:
                 return AnyTransition.asymmetric(
                     insertion: .move(edge: .top),
                     removal: .move(edge: .top)
                 ).combined(with: .opacity)
-            case .fullpage:
+            case .center:
                 return AnyTransition.asymmetric(
                     insertion: .slide,
                     removal: .scale
                 ).combined(with: .opacity)
-            case .toast:
+            case .bottom:
                 return AnyTransition.asymmetric(
                     insertion: .move(edge: .bottom),
                     removal: .move(edge: .bottom)
@@ -61,17 +61,17 @@ public extension AlertModel {
     }
 
     enum AlertAnimation {
-        case modal(duration: Double)
-        case fullpage(duration: Double)
-        case toast(duration: Double)
+        case top(duration: Double)
+        case center(duration: Double)
+        case bottom(duration: Double)
 
         public var value: Animation {
             switch self {
-            case .modal(let duration):
+            case .top(let duration):
                 return Animation.easeInOut(duration: duration)
-            case .fullpage(let duration):
+            case .center(let duration):
                 return Animation.easeInOut(duration: duration)
-            case .toast(let duration):
+            case .bottom(let duration):
                 return Animation.linear(duration: duration)
             }
         }
