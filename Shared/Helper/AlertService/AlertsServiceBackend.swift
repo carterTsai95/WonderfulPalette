@@ -13,7 +13,6 @@ class AlertsServiceBackend: AlertsService, ObservableObject {
     @Published var currentAlerts: [AlertModel] = []
     private var alertTimer: Timer?
     private var cancellables: Set<AnyCancellable> = []
-    let animation = Animation.easeInOut(duration: 0.1)
     let transition = AnyTransition.asymmetric(insertion: .scale, removal: .opacity).combined(with: .opacity)
 
     init() {
@@ -27,10 +26,17 @@ class AlertsServiceBackend: AlertsService, ObservableObject {
             .store(in: &cancellables)
     }
 
-    func presentAlert(title: String) {
+    func presentAlert(alertModel: AlertModel) {
         DispatchQueue.global(qos: .utility).async {
             self.alertsQueueSignal.send(
-                AlertModel(title: title)
+                AlertModel(
+                    title: alertModel.title,
+                    type: alertModel.type,
+                    autoDismiss: alertModel.autoDismiss,
+                    isTapToDismiss: alertModel.isTapToDismiss,
+                    isDragToDismiss: alertModel.isDragToDismiss,
+                    description: alertModel.description
+                )
             )
             UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
         }
@@ -59,7 +65,7 @@ class AlertsServiceBackend: AlertsService, ObservableObject {
         guard let index = currentAlerts.firstIndex(where: { $0.id == alert.id }) else {
             return
         }
-        withAnimation(self.currentAlerts[index].alertAnimation.value) {
+        withAnimation(self.currentAlerts[index].animation) {
             currentAlerts[index].timer?.invalidate()
             currentAlerts[index].timer = nil
             print("Remove Alert: \(currentAlerts[index].title)")

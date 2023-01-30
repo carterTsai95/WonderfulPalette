@@ -24,7 +24,7 @@ struct AlertsPresentationModifier: ViewModifier {
         ZStack {
             ForEach(alertService.currentAlerts, id: \.id) { alert in
                 CustomAlertView(alertModel: alert)
-                    .transition(alert.alertTransition.value)
+                    .transition(alert.type.transition)
                     .onTapGesture {
                         if alert.isTapToDismiss {
                             alertService.removeAlert(alert)

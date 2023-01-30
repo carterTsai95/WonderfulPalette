@@ -9,22 +9,44 @@ import Foundation
 import SwiftUI
 
 public struct AlertModel: Equatable {
+    public init(
+        title: String = "Default Title",
+        type: AlertType = .top,
+        autoDismiss: Bool = false,
+        isTapToDismiss: Bool = false,
+        isDragToDismiss: Bool = false,
+        timer: Timer? = nil,
+        description: String? = nil
+    ) {
+        self.title = title
+        self.timer = timer
+        self.description = description
+    }
+
     public static func == (lhs: AlertModel, rhs: AlertModel) -> Bool {
         return lhs.id == rhs.id
     }
 
     let id: UUID = UUID()
-    let type: AlertType = .bottom
+    let type: AlertType = .top
     let title: String
     let autoDismiss: Bool = false
     let isTapToDismiss: Bool = false
     let isDragToDismiss: Bool = true
     let countDownTimer: Int = 2
-    let alertAnimationDuration: Double = 3
+    let alertAnimationDuration: Double = 1
     var timer: Timer?
     var description: String?
-    var alertAnimation: AlertAnimation = .center(duration: 1)
-    var alertTransition: AlertTransition = .bottom
+    var animation: Animation {
+        switch type {
+        case .top:
+            return Animation.easeInOut(duration: alertAnimationDuration)
+        case .center:
+            return Animation.easeInOut(duration: alertAnimationDuration)
+        case .bottom:
+            return Animation.linear(duration: alertAnimationDuration)
+        }
+    }
 }
 
 public extension AlertModel {
@@ -32,14 +54,8 @@ public extension AlertModel {
         case top
         case center
         case bottom
-    }
-    // Animation and Transition
-    enum AlertTransition {
-        case top
-        case center
-        case bottom
 
-        public var value: AnyTransition {
+        var transition: AnyTransition {
             switch self {
             case .top:
                 return AnyTransition.asymmetric(
@@ -59,21 +75,21 @@ public extension AlertModel {
             }
         }
     }
-
-    enum AlertAnimation {
-        case top(duration: Double)
-        case center(duration: Double)
-        case bottom(duration: Double)
-
-        public var value: Animation {
-            switch self {
-            case .top(let duration):
-                return Animation.easeInOut(duration: duration)
-            case .center(let duration):
-                return Animation.easeInOut(duration: duration)
-            case .bottom(let duration):
-                return Animation.linear(duration: duration)
-            }
-        }
-    }
+    // Animation and Transition
+//    private enum AlertTransition {
+//        case top
+//        case center
+//        case bottom
+//
+//        public var value: AnyTransition {
+//            switch self {
+//            case .top:
+//
+//            case .center:
+//
+//            case .bottom:
+//
+//            }
+//        }
+//    }
 }

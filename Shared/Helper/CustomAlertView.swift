@@ -28,7 +28,7 @@ struct CustomAlertView: View {
                             .font(.title)
                         Text(alertModel.title)
                             .fontWeight(.medium)
-                        Text("Modal")
+                        Text("Top")
                     }
                     .padding(.vertical, 25)
                     .padding(.horizontal, 35)
@@ -117,8 +117,19 @@ extension CustomAlertView {
         }
     }
 
+    private func isDraggable(dragOffset: CGFloat) -> Bool {
+        switch alertModel.type {
+        case .top:
+            return dragOffset < 0
+        case .center:
+            return dragOffset > 0
+        case .bottom:
+            return dragOffset > 0
+        }
+    }
+
     private func dragOffset() -> CGFloat {
-        if (dragState.translation.height > 0) {
+        if isDraggable(dragOffset: dragState.translation.height) {
             return dragState.translation.height
         }
 

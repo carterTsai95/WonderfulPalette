@@ -11,6 +11,6 @@ import Combine
 protocol AlertsService {
     var alertsQueueSignal: PassthroughSubject<AlertModel, Never> { get }
     func presentAlert(
-        title: String
+        alertModel: AlertModel
     )
 }
