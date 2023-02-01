@@ -18,7 +18,7 @@
 		AD84202528E9EAFB009CCBF2 /* UIElementPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */; };
 		AD84202728EA73B9009CCBF2 /* ColorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202628EA73B9009CCBF2 /* ColorCellView.swift */; };
 		AD84202A28EBD047009CCBF2 /* ColorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202928EBD047009CCBF2 /* ColorCellViewModel.swift */; };
-		AD84202C28EC741F009CCBF2 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202B28EC741F009CCBF2 /* CustomAlertView.swift */; };
+		AD84202C28EC741F009CCBF2 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202B28EC741F009CCBF2 /* AlertView.swift */; };
 		AD84205328EDFCB0009CCBF2 /* AlertsPresentationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84205228EDFCB0009CCBF2 /* AlertsPresentationModifier.swift */; };
 		AD84205528EDFD1A009CCBF2 /* AlertsServiceBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84205428EDFD1A009CCBF2 /* AlertsServiceBackend.swift */; };
 		AD84205728EDFD4E009CCBF2 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84205628EDFD4E009CCBF2 /* AlertModel.swift */; };
@@ -53,7 +53,7 @@
 		AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElementPreview.swift; sourceTree = "<group>"; };
 		AD84202628EA73B9009CCBF2 /* ColorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellView.swift; sourceTree = "<group>"; };
 		AD84202928EBD047009CCBF2 /* ColorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellViewModel.swift; sourceTree = "<group>"; };
-		AD84202B28EC741F009CCBF2 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		AD84202B28EC741F009CCBF2 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		AD84205228EDFCB0009CCBF2 /* AlertsPresentationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsPresentationModifier.swift; sourceTree = "<group>"; };
 		AD84205428EDFD1A009CCBF2 /* AlertsServiceBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsServiceBackend.swift; sourceTree = "<group>"; };
 		AD84205628EDFD4E009CCBF2 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 				AD84205128EDFC92009CCBF2 /* AlertService */,
 				AD84202328E9EA49009CCBF2 /* View+Modifier */,
 				ADC1340328E5231400F979E2 /* Color+Extension.swift */,
-				AD84202B28EC741F009CCBF2 /* CustomAlertView.swift */,
+				AD84202B28EC741F009CCBF2 /* AlertView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 				AD6F0232290232C1004715AC /* ShowSettingView.swift in Sources */,
 				AD84202728EA73B9009CCBF2 /* ColorCellView.swift in Sources */,
 				AD84205328EDFCB0009CCBF2 /* AlertsPresentationModifier.swift in Sources */,
-				AD84202C28EC741F009CCBF2 /* CustomAlertView.swift in Sources */,
+				AD84202C28EC741F009CCBF2 /* AlertView.swift in Sources */,
 				AD84205728EDFD4E009CCBF2 /* AlertModel.swift in Sources */,
 				AD84205928EDFD72009CCBF2 /* AlertService.swift in Sources */,
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,

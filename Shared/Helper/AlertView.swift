@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomAlertView: View {
+struct AlertView: View {
     @EnvironmentObject var alertService: AlertsServiceBackend
     @GestureState private var dragState = DragState.inactive
     @State private var lastDragPosition: CGFloat = 0
@@ -93,7 +93,7 @@ struct CustomAlertView: View {
     }
 }
 
-extension CustomAlertView {
+extension AlertView {
     private enum DragState {
         case inactive
         case dragging(translation: CGSize)
@@ -179,7 +179,7 @@ extension CustomAlertView {
 struct CustomAlertView_Previews: PreviewProvider {
     static var previews: some View {
         UIElementPreview(
-            CustomAlertView(
+            AlertView(
                 alertModel: .init(title: "Test Model")
             )
         )

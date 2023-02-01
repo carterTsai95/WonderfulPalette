@@ -76,21 +76,4 @@ public extension AlertModel {
             }
         }
     }
-    // Animation and Transition
-//    private enum AlertTransition {
-//        case top
-//        case center
-//        case bottom
-//
-//        public var value: AnyTransition {
-//            switch self {
-//            case .top:
-//
-//            case .center:
-//
-//            case .bottom:
-//
-//            }
-//        }
-//    }
 }
