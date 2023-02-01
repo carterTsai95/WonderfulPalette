@@ -11,15 +11,17 @@ import SwiftUI
 public struct AlertModel: Equatable {
     public init(
         title: String = "Default Title",
-        type: AlertType = .top,
+        type: AlertType = .bottom,
         autoDismiss: Bool = false,
         isTapToDismiss: Bool = false,
         isDragToDismiss: Bool = false,
-        timer: Timer? = nil,
         description: String? = nil
     ) {
         self.title = title
-        self.timer = timer
+        self.type = type
+        self.autoDismiss = autoDismiss
+        self.isTapToDismiss = isTapToDismiss
+        self.isDragToDismiss = isDragToDismiss
         self.description = description
     }
 
@@ -28,12 +30,11 @@ public struct AlertModel: Equatable {
     }
 
     let id: UUID = UUID()
-    let type: AlertType = .top
+    let type: AlertType
     let title: String
-    let autoDismiss: Bool = false
-    let isTapToDismiss: Bool = false
-    let isDragToDismiss: Bool = true
-    let countDownTimer: Int = 2
+    let autoDismiss: Bool
+    let isTapToDismiss: Bool
+    let isDragToDismiss: Bool
     let alertAnimationDuration: Double = 1
     var timer: Timer?
     var description: String?

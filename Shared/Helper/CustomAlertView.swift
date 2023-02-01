@@ -128,6 +128,19 @@ extension CustomAlertView {
         }
     }
 
+    private func shouldRemoveAlert(_ dragOffset: CGFloat) -> Bool {
+        let reference = 50.0
+
+        switch alertModel.type {
+        case .top:
+            return dragOffset < reference
+        case .center:
+            return dragOffset > reference
+        case .bottom:
+            return dragOffset > reference
+        }
+    }
+
     private func dragOffset() -> CGFloat {
         if isDraggable(dragOffset: dragState.translation.height) {
             return dragState.translation.height
@@ -150,11 +163,10 @@ extension CustomAlertView {
     }
 
     private func onDragEnded(drag: DragGesture.Value) {
-        let reference = 50.0
         if shouldUpdateLastDragPosition(dragOffset: drag.translation.height) {
             lastDragPosition = drag.translation.height
         }
-        if (abs(drag.translation.height) > reference) {
+        if shouldRemoveAlert(drag.translation.height) {
             alertService.removeAlert(alertModel)
         }
 
