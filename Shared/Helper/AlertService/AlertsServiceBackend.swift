@@ -9,14 +9,14 @@ import SwiftUI
 import Combine
 
 class AlertsServiceBackend: AlertsService, ObservableObject {
-    var alertsQueueSignal: PassthroughSubject<AlertModel, Never> = .init()
+    var alertSignal: PassthroughSubject<AlertModel, Never> = .init()
     @Published var currentAlerts: [AlertModel] = []
     private var alertTimer: Timer?
     private var cancellables: Set<AnyCancellable> = []
     let transition = AnyTransition.asymmetric(insertion: .scale, removal: .opacity).combined(with: .opacity)
 
     init() {
-        alertsQueueSignal
+        alertSignal
             .receive(on: RunLoop.main)
             .sink { alertResult in
                 withAnimation(.spring()) {
@@ -28,7 +28,7 @@ class AlertsServiceBackend: AlertsService, ObservableObject {
 
     func presentAlert(alertModel: AlertModel) {
         DispatchQueue.global(qos: .utility).async {
-            self.alertsQueueSignal.send(
+            self.alertSignal.send(
                 AlertModel(
                     title: alertModel.title,
                     type: alertModel.type,

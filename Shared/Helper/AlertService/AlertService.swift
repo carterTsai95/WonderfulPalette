@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol AlertsService {
-    var alertsQueueSignal: PassthroughSubject<AlertModel, Never> { get }
+    var alertSignal: PassthroughSubject<AlertModel, Never> { get }
     func presentAlert(
         alertModel: AlertModel
     )
