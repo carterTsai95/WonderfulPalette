@@ -19,62 +19,7 @@ struct AlertView: View {
     }
 
     func alertViewBuilder() -> some View {
-        Group {
-            switch alertModel.type {
-            case .top:
-                VStack {
-                    VStack(spacing: 20) {
-                        Image(systemName: "checkmark")
-                            .font(.title)
-                        Text(alertModel.title)
-                            .fontWeight(.medium)
-                        Text("Top")
-                    }
-                    .padding(.vertical, 25)
-                    .padding(.horizontal, 35)
-                    .background(
-                        .ultraThinMaterial
-                    )
-                    .cornerRadius(15)
-                    Spacer()
-                }
-            case .center:
-                VStack {
-                    Spacer()
-                    VStack(spacing: 20) {
-                        Image(systemName: "checkmark")
-                            .font(.title)
-                        Text(alertModel.title)
-                            .fontWeight(.medium)
-                    }
-                    .padding(.vertical, 25)
-                    .padding(.horizontal, 35)
-                    .background(
-                        .ultraThinMaterial
-                    )
-                    .cornerRadius(15)
-                    Spacer()
-                }
-            case .bottom:
-                VStack {
-                    Spacer()
-                    VStack(spacing: 20) {
-                        Image(systemName: "checkmark")
-                            .font(.title)
-                        Text(alertModel.title)
-                            .fontWeight(.medium)
-                        Text("Toast")
-                            .fontWeight(.medium)
-                    }
-                    .padding(.vertical, 25)
-                    .padding(.horizontal, 35)
-                    .background(
-                        .ultraThinMaterial
-                    )
-                    .cornerRadius(15)
-                }
-            }
-        }
+        alertModel.alertView
     }
 
     func alertView() -> some View {
@@ -125,6 +70,8 @@ extension AlertView {
             return dragOffset > 0
         case .bottom:
             return dragOffset > 0
+        case .custom(_):
+            return dragOffset > 0
         }
     }
 
@@ -137,6 +84,8 @@ extension AlertView {
         case .center:
             return dragOffset > reference
         case .bottom:
+            return dragOffset > reference
+        case .custom(_):
             return dragOffset > reference
         }
     }
@@ -158,6 +107,8 @@ extension AlertView {
         case .center:
             return dragOffset < 0
         case .bottom:
+            return dragOffset > 0
+        case .custom(_):
             return dragOffset > 0
         }
     }

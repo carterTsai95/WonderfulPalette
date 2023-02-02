@@ -25,7 +25,13 @@ struct ColorCellView: View {
     var body: some View {
             Button {
                 viewModel.copyToClipboard()
-                alertService.presentAlert(alertModel: AlertModel(title: color.hexStringFromColor()))
+                alertService.presentAlert(
+                    alertModel: AlertModel(
+                        title: color.hexStringFromColor(),
+                        type: .top
+                    )
+                )
+                
             } label: {
                 VStack(alignment: .center, spacing: 2) {
                     Rectangle()

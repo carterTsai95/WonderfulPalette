@@ -31,11 +31,11 @@ class AlertsServiceBackend: AlertsService, ObservableObject {
             self.alertSignal.send(
                 AlertModel(
                     title: alertModel.title,
+                    description: alertModel.description,
                     type: alertModel.type,
                     autoDismiss: alertModel.autoDismiss,
                     isTapToDismiss: alertModel.isTapToDismiss,
-                    isDragToDismiss: alertModel.isDragToDismiss,
-                    description: alertModel.description
+                    isDragToDismiss: alertModel.isDragToDismiss
                 )
             )
             UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
