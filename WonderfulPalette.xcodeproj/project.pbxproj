@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD3E125D2A472F1200818BE0 /* CTAlert in Frameworks */ = {isa = PBXBuildFile; productRef = AD3E125C2A472F1200818BE0 /* CTAlert */; };
 		AD693EDC2922AFB9009C3E84 /* EmptyLandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD693EDB2922AFB9009C3E84 /* EmptyLandingPageView.swift */; };
 		AD6F0232290232C1004715AC /* ShowSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F0231290232C1004715AC /* ShowSettingView.swift */; };
 		AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F02352902334B004715AC /* FormRowLinkView.swift */; };
@@ -18,11 +19,6 @@
 		AD84202528E9EAFB009CCBF2 /* UIElementPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */; };
 		AD84202728EA73B9009CCBF2 /* ColorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202628EA73B9009CCBF2 /* ColorCellView.swift */; };
 		AD84202A28EBD047009CCBF2 /* ColorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202928EBD047009CCBF2 /* ColorCellViewModel.swift */; };
-		AD84202C28EC741F009CCBF2 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84202B28EC741F009CCBF2 /* AlertView.swift */; };
-		AD84205328EDFCB0009CCBF2 /* AlertsPresentationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84205228EDFCB0009CCBF2 /* AlertsPresentationModifier.swift */; };
-		AD84205528EDFD1A009CCBF2 /* AlertsServiceBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84205428EDFD1A009CCBF2 /* AlertsServiceBackend.swift */; };
-		AD84205728EDFD4E009CCBF2 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84205628EDFD4E009CCBF2 /* AlertModel.swift */; };
-		AD84205928EDFD72009CCBF2 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84205828EDFD72009CCBF2 /* AlertService.swift */; };
 		ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */; };
 		ADC133F328E3D86300F979E2 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC133E228E3D86100F979E2 /* HomePageView.swift */; };
 		ADC133F528E3D86300F979E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC133E328E3D86300F979E2 /* Assets.xcassets */; };
@@ -40,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD3E125B2A472F0100818BE0 /* CTAlert */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CTAlert; path = ../CTAlert; sourceTree = "<group>"; };
 		AD693EDB2922AFB9009C3E84 /* EmptyLandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyLandingPageView.swift; sourceTree = "<group>"; };
 		AD6F0231290232C1004715AC /* ShowSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSettingView.swift; sourceTree = "<group>"; };
 		AD6F02352902334B004715AC /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
@@ -53,11 +50,6 @@
 		AD84202428E9EAFB009CCBF2 /* UIElementPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElementPreview.swift; sourceTree = "<group>"; };
 		AD84202628EA73B9009CCBF2 /* ColorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellView.swift; sourceTree = "<group>"; };
 		AD84202928EBD047009CCBF2 /* ColorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellViewModel.swift; sourceTree = "<group>"; };
-		AD84202B28EC741F009CCBF2 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
-		AD84205228EDFCB0009CCBF2 /* AlertsPresentationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsPresentationModifier.swift; sourceTree = "<group>"; };
-		AD84205428EDFD1A009CCBF2 /* AlertsServiceBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsServiceBackend.swift; sourceTree = "<group>"; };
-		AD84205628EDFD4E009CCBF2 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
-		AD84205828EDFD72009CCBF2 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderfulPaletteApp.swift; sourceTree = "<group>"; };
 		ADC133E228E3D86100F979E2 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		ADC133E328E3D86300F979E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,12 +69,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3E125D2A472F1200818BE0 /* CTAlert in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD3E125A2A472F0000818BE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD3E125B2A472F0100818BE0 /* CTAlert */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD693ED92922AF4E009C3E84 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,17 +176,6 @@
 			path = ColorCellView;
 			sourceTree = "<group>";
 		};
-		AD84205128EDFC92009CCBF2 /* AlertService */ = {
-			isa = PBXGroup;
-			children = (
-				AD84205228EDFCB0009CCBF2 /* AlertsPresentationModifier.swift */,
-				AD84205428EDFD1A009CCBF2 /* AlertsServiceBackend.swift */,
-				AD84205628EDFD4E009CCBF2 /* AlertModel.swift */,
-				AD84205828EDFD72009CCBF2 /* AlertService.swift */,
-			);
-			path = AlertService;
-			sourceTree = "<group>";
-		};
 		ADC133DB28E3D86100F979E2 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +183,7 @@
 				AD84201728E74085009CCBF2 /* WonderfulPaletteTests */,
 				ADC133E928E3D86300F979E2 /* Products */,
 				AD693ED92922AF4E009C3E84 /* Recovered References */,
+				AD3E125A2A472F0000818BE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,10 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				AD7360922922ABB5000DD6C2 /* APIService */,
-				AD84205128EDFC92009CCBF2 /* AlertService */,
 				AD84202328E9EA49009CCBF2 /* View+Modifier */,
 				ADC1340328E5231400F979E2 /* Color+Extension.swift */,
-				AD84202B28EC741F009CCBF2 /* AlertView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -291,6 +280,9 @@
 			dependencies = (
 			);
 			name = WonderfulPalette;
+			packageProductDependencies = (
+				AD3E125C2A472F1200818BE0 /* CTAlert */,
+			);
 			productName = "WonderfulPalette (iOS)";
 			productReference = ADC133E828E3D86300F979E2 /* WonderfulPalette.app */;
 			productType = "com.apple.product-type.application";
@@ -390,15 +382,10 @@
 				AD6F0238290234BE004715AC /* FormRowStaticView.swift in Sources */,
 				ADC1340428E5231400F979E2 /* Color+Extension.swift in Sources */,
 				AD84202528E9EAFB009CCBF2 /* UIElementPreview.swift in Sources */,
-				AD84205528EDFD1A009CCBF2 /* AlertsServiceBackend.swift in Sources */,
 				AD84202228E9E701009CCBF2 /* ColorPatternContainer.swift in Sources */,
 				AD84202A28EBD047009CCBF2 /* ColorCellViewModel.swift in Sources */,
 				AD6F0232290232C1004715AC /* ShowSettingView.swift in Sources */,
 				AD84202728EA73B9009CCBF2 /* ColorCellView.swift in Sources */,
-				AD84205328EDFCB0009CCBF2 /* AlertsPresentationModifier.swift in Sources */,
-				AD84202C28EC741F009CCBF2 /* AlertView.swift in Sources */,
-				AD84205728EDFD4E009CCBF2 /* AlertModel.swift in Sources */,
-				AD84205928EDFD72009CCBF2 /* AlertService.swift in Sources */,
 				ADC133F128E3D86300F979E2 /* WonderfulPaletteApp.swift in Sources */,
 				AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */,
 				AD693EDC2922AFB9009C3E84 /* EmptyLandingPageView.swift in Sources */,
@@ -659,6 +646,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD3E125C2A472F1200818BE0 /* CTAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CTAlert;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ADC133DC28E3D86100F979E2 /* Project object */;
 }

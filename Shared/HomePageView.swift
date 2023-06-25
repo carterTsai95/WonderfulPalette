@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CTAlert
 
 struct HomePageView: View {
     var body: some View {

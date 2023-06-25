@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import CTAlert
 
 @main
 struct WonderfulPaletteApp: App {

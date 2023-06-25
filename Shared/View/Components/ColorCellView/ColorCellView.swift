@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CTAlert
 
 struct ColorCellView: View {
     @EnvironmentObject var alertService: AlertsServiceBackend
@@ -31,7 +32,6 @@ struct ColorCellView: View {
                         type: .top
                     )
                 )
-                
             } label: {
                 VStack(alignment: .center, spacing: 2) {
                     Rectangle()
