@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD3E125D2A472F1200818BE0 /* CTAlert in Frameworks */ = {isa = PBXBuildFile; productRef = AD3E125C2A472F1200818BE0 /* CTAlert */; };
+		AD3E127B2A51D46E00818BE0 /* ToastExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3E127A2A51D46E00818BE0 /* ToastExample.swift */; };
+		AD3E127D2A51DA7A00818BE0 /* CTAlert in Frameworks */ = {isa = PBXBuildFile; productRef = AD3E127C2A51DA7A00818BE0 /* CTAlert */; };
 		AD693EDC2922AFB9009C3E84 /* EmptyLandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD693EDB2922AFB9009C3E84 /* EmptyLandingPageView.swift */; };
 		AD6F0232290232C1004715AC /* ShowSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F0231290232C1004715AC /* ShowSettingView.swift */; };
 		AD6F02362902334B004715AC /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F02352902334B004715AC /* FormRowLinkView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		AD3E125B2A472F0100818BE0 /* CTAlert */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CTAlert; path = ../CTAlert; sourceTree = "<group>"; };
+		AD3E127A2A51D46E00818BE0 /* ToastExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastExample.swift; sourceTree = "<group>"; };
 		AD693EDB2922AFB9009C3E84 /* EmptyLandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyLandingPageView.swift; sourceTree = "<group>"; };
 		AD6F0231290232C1004715AC /* ShowSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSettingView.swift; sourceTree = "<group>"; };
 		AD6F02352902334B004715AC /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD3E125D2A472F1200818BE0 /* CTAlert in Frameworks */,
+				AD3E127D2A51DA7A00818BE0 /* CTAlert in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +198,7 @@
 				ADC133FF28E3D8F300F979E2 /* Model */,
 				ADC133E128E3D86100F979E2 /* WonderfulPaletteApp.swift */,
 				ADC133E228E3D86100F979E2 /* HomePageView.swift */,
+				AD3E127A2A51D46E00818BE0 /* ToastExample.swift */,
 				ADC133E328E3D86300F979E2 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -281,7 +284,7 @@
 			);
 			name = WonderfulPalette;
 			packageProductDependencies = (
-				AD3E125C2A472F1200818BE0 /* CTAlert */,
+				AD3E127C2A51DA7A00818BE0 /* CTAlert */,
 			);
 			productName = "WonderfulPalette (iOS)";
 			productReference = ADC133E828E3D86300F979E2 /* WonderfulPalette.app */;
@@ -381,6 +384,7 @@
 				ADC133F328E3D86300F979E2 /* HomePageView.swift in Sources */,
 				AD6F0238290234BE004715AC /* FormRowStaticView.swift in Sources */,
 				ADC1340428E5231400F979E2 /* Color+Extension.swift in Sources */,
+				AD3E127B2A51D46E00818BE0 /* ToastExample.swift in Sources */,
 				AD84202528E9EAFB009CCBF2 /* UIElementPreview.swift in Sources */,
 				AD84202228E9E701009CCBF2 /* ColorPatternContainer.swift in Sources */,
 				AD84202A28EBD047009CCBF2 /* ColorCellViewModel.swift in Sources */,
@@ -648,7 +652,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AD3E125C2A472F1200818BE0 /* CTAlert */ = {
+		AD3E127C2A51DA7A00818BE0 /* CTAlert */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CTAlert;
 		};

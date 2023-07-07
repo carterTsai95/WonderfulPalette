@@ -9,7 +9,7 @@ import SwiftUI
 import CTAlert
 
 struct ColorCellView: View {
-    @EnvironmentObject var alertService: AlertsServiceBackend
+    @Environment(\.alertService) var alertService
     @ScaledMetric var cellSize: CGFloat = 55
     @State var showAlert = false
 
@@ -28,8 +28,17 @@ struct ColorCellView: View {
                 viewModel.copyToClipboard()
                 alertService.presentAlert(
                     alertModel: AlertModel(
-                        title: color.hexStringFromColor(),
-                        type: .top
+                        title: color.hexaRGB,
+                        type: .default,
+                        configuration: .init(
+                            position: .top,
+                            alertTransition: .custom(
+                                .asymmetric(
+                                    insertion: .slide,
+                                    removal: .slide
+                                ).combined(with: .opacity)
+                            )
+                        )
                     )
                 )
             } label: {
@@ -37,10 +46,14 @@ struct ColorCellView: View {
                     Rectangle()
                         .foregroundColor(color)
                         .frame(width: cellSize, height: cellSize)
-                    Text(color.hexStringFromColor())
+                }
+                .overlay(
+                    alignment: .bottom
+                ) {
+                    Text(color.hexaRGB)
                         .font(.caption2)
                         .fixedSize(horizontal: false, vertical: true)
-                        .foregroundColor(.gray)
+                        .foregroundColor(color.contrastColor())
                 }
             }
     }

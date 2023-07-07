@@ -18,6 +18,6 @@ class ColorCellViewModel {
     }
 
     func copyToClipboard() {
-        pasteboard.string = color.hexStringFromColor()
+        pasteboard.string = color.hexaRGB
     }
 }

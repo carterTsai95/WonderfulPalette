@@ -19,13 +19,13 @@ struct HomePageView: View {
                 .tabItem {
                     Label("Setting", systemImage: "list.dash")
                 }
-        }.alertsPresentation()
+        }
+        .alertsPresentation()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomePageView()
-            .environmentObject(AlertsServiceBackend())
     }
 }

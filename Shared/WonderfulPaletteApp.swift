@@ -14,7 +14,7 @@ struct WonderfulPaletteApp: App {
     var body: some Scene {
         WindowGroup {
             HomePageView()
-                .environmentObject(AlertsServiceBackend())
+                //.alertsPresentation()
         }
     }
 }
